@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- our styles -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- media query styles-->
+  <link rel="stylesheet" href="mediaqueries.css">
+ 
+  <!--animate library-->
+  <link rel="stylesheet" href="animate.css">
+   <!-- jquery -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <!-- google fonts -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Paytone+One" rel="stylesheet">
+  <title>Divvy</title>
+</head>
+
+<body>
+
+  <header>
+    <h1 class="animated jello">Divvy.</h1>
+    <h2 id="subHeader">Budgeting made simple</h2>
+  </header>
+
+  <main>
+
+    <!-- pop up when user goes over budget, defaults to no display -->
+    <section id="yaBroke">
+      <img id="yaBroke_close" src="images/close.png" alt="">
+      <p id="yaBroke_warning">You have now spent all of your total weekly budget.</p>
+    </section>
+
+        <!-- bills card -->
+        <section class="card card_bills animated bounceInLeft">
+            <div class="card_header"> 
+              <h3 class="card_header_title">Bills</h3>
+              <!-- <img src="images/add.png" alt="button for card"> -->
+            </div>
+            <!--copied material-->
+            <div class="totalSpent">
+                <p>You've spent $<span id="totalSpent_bills"></span> on Bills</p>
+              </div>
+  
+              <div class="updateExpenses">
+                <input type="text" class="expense_Name expense_Name_bills" placeholder="Name of expense">
+                <input type="number" class="expense_Amount_bills" placeholder="$0.00">
+                <button type="button" class="expenseAddBills">ADD</button>
+              </div>
+              
+              <!-- expense log that shows the expense names and amounts -->
+              <p class="expenseLog_header">Expense Log</p>
+              <div class="expenseLog expenseLog_bills">
+                
+               
+              </div>
+
+
+        </section>
+
+        <!-- food card -->
+        <section class="card card_food animated bounceInRight">
+            <div class="card_header"> 
+              <h3 class="card_header_title">Food</h3>
+              <!-- <img src="images/add.png" class= alt="button for card"> -->
+            </div>
+
+            <div class="totalSpent">
+              <p>You've spent $<span id="totalSpent_food"></span> on Food</p>
+            </div>
+
+            <div class="updateExpenses">
+              <input type="text" class="expense_Name expense_Name_food" placeholder="Name of expense">
+              <input type="number" class="expense_Amount_food" placeholder="$0.00">
+              <button type="button" class="expenseAddFood">ADD</button>
+            </div>
+            
+            <!-- expense log that shows the expense names and amounts -->
+            <p class="expenseLog_header">Expense Log</p>
+            <div class="expenseLog expenseLog_food" id="expenseLog_foodOnly">
+              
+             
+            </div>
+
+        </section>
+
+
+
+        <!-- clothes card -->
+        <section class="card card_clothes animated bounceInLeft">
+          <div class="card_header"> 
+              <h3 class="card_header_title">Clothes</h3>
+              <!-- <img src="images/add.png" alt="button for card"> -->
+            </div>
+            <div class="totalSpent">
+              <p>You've spent $<span id="totalSpent_clothes"></span> on Clothes</p>
+            </div>
+
+            <div class="updateExpenses">
+              <input type="text" class="expense_Name expense_Name_clothes" placeholder="Name of expense">
+              <input type="number" class="expense_Amount_clothes" placeholder="$0.00">
+              <button type="button" class="expenseAddClothes">ADD</button>
+            </div>
+            
+            <!-- expense log that shows the expense names and amounts -->
+            <p class="expenseLog_header">Expense Log</p>
+            <div class="expenseLog expenseLog_clothes">
+              
+             
+            </div>
+
+
+        </section>
+
+        <!-- entertain card -->
+        <section class="card card_entertain animated bounceInRight">
+          <div class="card_header"> 
+              <h3 class="card_header_title">Entertainment</h3>
+              <!-- <img src="images/add.png" alt="button for card"> -->
+          </div>
+
+            <!-- center this div with flexboxs -->
+            <div class="totalSpent">
+              <p>You've spent $<span id="totalSpent_entertain"></span> on Entertainment</p>
+            </div>
+
+            <div class="updateExpenses">
+              <input type="text" class="expense_Name_entertain expense_Name" placeholder="Name of expense">
+              <input type="number" class="expense_Amount_entertain" placeholder="$0.00">
+              <button type="button" class="expenseAddEntertain">ADD</button>
+            </div>
+            
+            <!-- expense log that shows the expense names and amounts -->
+            <p class="expenseLog_header">Expense Log</p>
+            <div class="expenseLog expenseLog_entertain">
+              
+             
+            </div>
+
+          </section>
+    
+    <!-- summary card  -->
+    <section class="card_summary card animated bounceInLeft"> 
+      <!-- card header  -->
+      <div class="card_header">  
+        <h3 id="card_summary_h3">summary</h3> 
+        <!-- <img src="images/add.png" alt="button for card">  -->
+      </div> 
+
+      
+        <!-- square  -->
+        <div class="summary_square" id="budgetInfo"> 
+          <p class="setBudget">Set your weekly budget:</p> 
+          <input type="number" id="weeklyBudgetInput"> 
+          <button id="weeklyBudgetSubmit">ADD</button> 
+        </div> 
+
+
+
+
+
+
+      
+   
+
+
+
+  </main>
+
+
+<footer>
+  <p id="footer_heading">Divvy</p>
+  <p>was created by</p>
+  <div id="divvyTeam"> 
+      <a href="http://www.tabbatha.net" target="_blank">Tabbatha</a>
+      <a href="https://github.com/aliapol" target="_blank">Alia</a>
+      <a href="https://github.com/Hannahsaintonge" target="_blank">Hannah</a>
+      <a href="https://github.com/johnson-cameron" target="_blank">Cameron</a>
+  </div>
+</footer>  
+
+ <script src="script.js"></script> 
+</body>
+</html>
